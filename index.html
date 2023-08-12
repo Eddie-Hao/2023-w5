@@ -1,60 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/2023-w5/assets/main-2402f613.js"></script>
-    <link rel="stylesheet" href="/2023-w5/assets/main-79bf3f39.css">
-  </head>
-  <body>
-    <h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
-    <h1 class="index-title">我是首頁</h1>
+<html lang="zh-TW">
 
-    <div class="card" style="width: 18rem">
-      <img src="/2023-w5/assets/cat-0c0689ae.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>後台-Assignment</title>
+  <script type="module" crossorigin src="/2023-w5/assets/main-7e77f65f.js"></script>
+  <link rel="stylesheet" href="/2023-w5/assets/main-6246a892.css">
+</head>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+<body>
+  <div class="d-flex">
+    <nav class="sidebar bg-gray-100 d-flex flex-column p-8">
+    <a href="#" class="mb-8">
+        <img src="/2023-w5/assets/logo-ANSWER-5336fb45.svg" alt="ANSWER">
+    </a>
+    <ul class="nav flex-column gap-4 mb-auto">
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" aria-current="page" href="#">
+                <span class="material-icons align-middle me-4">insert_chart</span>
+                Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">forum</span>
+                Question
+            </a>
+        </li>
+        <!-- <a>的class加上 ejs 判斷(三元運算子)，如果 page 為 assignment 的話加入 active 否則加入 link-dark  -->
+        <li class="nav-item">
+            <a class="nav-link fw-bold ps-0 active" href="../pages/index.html">
+                <span class="material-icons align-middle me-4">assignment</span>
+                Assignment
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">video_library</span>
+                Course
+            </a>
+        </li>
+        <!-- <a>的class加上 ejs 判斷(三元運算子)，如果 page 為 admin 的話加入 active 否則加入 link-dark  -->
+        <li class="nav-item">          
+            <a class="nav-link fw-bold ps-0 link-dark" href="../pages/admin.html">
+                <span class="material-icons align-middle me-4">group</span>
+                Admin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">settings</span>
+                Settings
+            </a>
+        </li>
+    </ul>
+    <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="Andy Chen" class="avatar rounded-circle">
         </div>
-      </div>
+        <div class="flex-grow-1 ms-3">
+            <h2 class="fs-6 fw-bold mb-1">Andy Chen</h2>
+            <small class="text-gray-600">andy0401@mail.com</small>
+        </div>
     </div>
+</nav>
 
-    <footer class="footer">我是 footer</footer>
-    
-  </body>
+      <div class="d-flex flex-column w-100 p-8">
+        <!-- 功能選單 -->
+        <div class="d-flex justify-content-between align-items-center fw-bold mb-8">
+    <div class="d-flex align-items-center">
+        <h1 class="fs-4 me-12">
+             Assignment 
+        </h1>
+        <!-- 使用ejs + if else 判斷該加入哪段結構 -->
+        
+        <a href="#" class="link-dark lh-base text-decoration-none">All Courses<span
+                class="material-icons-outlined text-success align-top ms-2">arrow_downward</span>
+        </a>
+        
+    </div>
+    <!-- 功能icon btn -->
+    <div class="d-flex">
+        <a href="#" class="link-dark me-2"><span class="material-icons p-2">search</span></a>
+        <a href="#" class="link-dark"><span class="material-icons p-2">notifications_active</span></a>
+    </div>
+</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="#" class="link-dark lh-base text-decoration-none fw-bold d-block mb-1">All(4)
+              <span class="material-icons link-success align-top ms-2">arrow_downward</span>
+            </a>
+            <span class="fs-8 text-gray-400">2 comments</span>
+          </div>
+          <!-- 列表+卡片內容 -->
+          <div class="d-flex justify-content-between">
+            <!-- 列表 -->
+            <div class="admin-list">
+              <ul class="list-group assignment-list-group text-gray-900 rounded-0">
+                <li class="list-group-item p-3 active">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-8 mb-0">Chapter Assignment 2</h4>
+                    <p class="fs-8 mb-0">4 hrs ago</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold mb-0">Please check this file…</p>
+                    <p class="fs-8 text-gray-600 mb-0">Emily Wang</p>
+                  </div>
+                </li>
+                <li class="list-group-item p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-8 mb-0">Chapter Assignment 1</h4>
+                    <p class="fs-8 mb-0">12 hrs ago</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold mb-0">My Homework</p>
+                    <p class="fs-8 text-gray-600 mb-0">David Xu</p>
+                  </div>
+                </li>
+                <li class="list-group-item p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-8 mb-0">Final Assignment</h4>
+                    <p class="fs-8 mb-0">18 hrs ago</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold mb-0">Have a problem with this…</p>
+                    <p class="fs-8 text-gray-600 mb-0">Tony Wei</p>
+                  </div>
+                </li>
+                <li class="list-group-item p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-8 mb-0">Final Assignment</h4>
+                    <p class="fs-8 mb-0">19 hrs ago</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold mb-0">Did I do it right?</p>
+                    <p class="fs-8 text-gray-600 mb-0">Christina Lin</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 卡片 -->
+            <div class="admin-card">
+              <div class="card rounded-0 mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center py-3">
+                  <div>
+                    <h5 class="fs-8 mb-1">Chapter Assignment 2 / HTML&CSS</h5>
+                    <p class="fw-bold mb-0">Please check this file for me, thanks!</p>
+                  </div>
+                  <a href="#" class="link-dark">
+                    <span class="material-icons align-middle">more_vert</span>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <!-- 上 -->
+                  <div class="mb-4 me-4">
+                    <div class="d-flex align-items-center mb-4">
+                      <div class="flex-shrink-0">
+                        <img
+                          src="https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2134&q=80"
+                          alt="member" class="avatar rounded-circle">
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <p class="fw-bold mb-0">Emily Wang</p>
+                        <time class="fs-8 text-gray-600">10:38 AM (4 hours ago)</time>
+                      </div>
+                    </div>
+                    <div class="border-bottom pb-4 ms-12">
+                      <p class="fs-7 mb-4">Hi Teacher, the attached file is my homework of chapter 2. And here comes a
+                        question: Why in the following code the height of the <span
+                        class="text-success text-decoration-none">div</span> is bigger than the height of the <span class="text-success text-decoration-none">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin.<br>
+                        What is the gap or extra space below image?</p>
+                      <button type="button"
+                        class="btn btn-light border border-gray-400 rounded-0 ps-3 pe-4 py-2 fw-bold">
+                        <span class="material-icons-outlined align-middle me-2">attach_file</span>
+                        HW-2-David.zip</button>
+                    </div>
+                  </div>
+                  <!-- 下 -->
+                  <div class="me-4">
+                    <div class="d-flex justify-content-between mb-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="flex-shrink-0">
+                          <img
+                            src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80"
+                            alt="member" class="avatar rounded-circle">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                          <p class="fw-bold mb-0">Andy Chen (You)</p>
+                          <time class="fs-8 text-gray-600">13:24 AM (1 hours ago)</time>
+                        </div>
+                      </div>
+                      <div>
+                        <a href="#" class="link-dark d-inline-block me-8">
+                          <span class="material-icons align-top">star_outline</span>
+                        </a>
+                        <a href="#" class="link-dark d-inline-block">
+                          <span class="material-icons align-top">edit</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="ms-12">
+                      <p class="fs-7">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. <br><br>
+                      You can: <br><br>
+                      • adjust the <span class="text-success text-decoration-none">vertical-align</span> of the image to position it elsewhere (e.g. the <span
+                      class="text-success text-decoration-none"> middle</span> ) or <br>
+                      • change the <span class="text-success text-decoration-none">display</span> so it isn’t inline.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <a href="#" class="d-inline-block link-dark me-6">
+                    <span class="material-icons align-top">navigate_before</span>
+                  </a>
+                  <a href="#" class="d-inline-block link-dark">
+                    <span class="material-icons align-top">navigate_next</span>
+                  </a>
+                </div>
+                <div class="d-flex">
+                  <a href="#" class="btn btn-outline-success rounded-1 px-8 py-2 me-4">Mark as read</a>
+                  <a href="./index-reply.html" class="btn btn-success rounded-1 px-8 py-2">Reply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+
+  
+</body>
+
 </html>
