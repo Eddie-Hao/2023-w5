@@ -1,0 +1,27 @@
+// 新增文字尺寸
+.fs-7{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.fs-8{
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+// 文字顏色
+$gray-types: (
+    gray-600 : $gray-600,
+    gray-400 : $gray-400,
+    gray-100 : $gray-100,
+) !default;
+
+@each $color, $variable-color in $gray-types{
+    .text-#{$color} {
+        color: $variable-color;
+    }
+    .bg-#{$color} {
+        background-color: $variable-color;
+    }
+}
+

@@ -1,0 +1,9 @@
+.btn-custome {
+    padding: 8px 32px;
+}
+
+.btn:disabled {
+        border: 1px solid $gray-400;
+        color: $gray-400;
+        background-color: $white;
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>後台-Admin</title>
+</head>
+
+<body>
+  <div class="d-flex">
+    <%- include('./layout/sidebar', {page: "admin" }); -%>
+      <div class="d-flex flex-column w-100 p-8">
+        <!-- 功能選單 -->
+        <%- include('./layout/header.ejs', { pageHeader: 'admin' }) %>
+        
+        <!-- 表單+頁籤 -->
+        <div class="d-flex flex-column justify-content-between h-100">
+          <!-- 表單 -->
+          <table class="table table-hover overflow-auto mb-auto">
+            <thead>
+              <tr>
+                <th scope="col">ID <span class="icon-sm material-icons align-middle text-success">arrow_downward</span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="align-middle">
+                <th scope="row">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <!--     按鈕保持 40px的 尺寸     -->
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <!-- 會員資料 -->
+                    <li class="me-2">
+                      <a href="#memberInfo1" class="d-block text-dark" data-bs-toggle="modal">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                      <div class="modal fade" id="memberInfo1" tabindex="-1" aria-labelledby="memberName1"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="card rounded-0 py-8 px-5">
+                              <div class="row">
+                                <div class="col-md-5">
+                                  <img
+                                    src="https://images.unsplash.com/photo-1522069394066-326005dc26b2?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1350&q=80"
+                                    alt="memberPhoto" class="admin-modal-img">
+                                </div>
+                                <div class="col-md-7">
+                                  <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                      <p class="card-subtitle">#1</p>
+                                      <!-- 使用<a>做關閉按鈕 -->
+                                      <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+                                    </div>
+                                    <div class="mb-4">
+                                      <p class="fs-6 mb-0">Admin</p>
+                                      <h2 class="fs-4 fw-bold mb-2" id="exampleModalLabel">Emir Wicks</h2>
+                                      <small class="text-gray-600">emir.wicks@mail.com</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <span class="badge rounded-0 text-bg-light px-2 py-1">Verified</span>
+                                      <!-- 下拉選單按鈕 -->
+                                      <a href="#memberInfoEdit" class="link-success" data-bs-toggle="collapse"
+                                        role="button">
+                                        <span class="material-icons align-middle">expand_more</span>
+                                      </a>
+                                    </div>
+                                    <div class="collapse" id="memberInfoEdit">
+                                      <div class="d-flex justify-content-between pt-8">
+                                        <a href="#" class="btn btn-outline-danger btn-custome">Deactivate</a>
+                                        <a href="#" class="btn btn-success btn-custome">Edit</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 會員認證 -->
+                    <li>
+                      <a href="#memberEdit1" class="d-block text-dark" data-bs-toggle="modal">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                      <div class="modal fade" id="memberEdit1" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                            <div class="modal-header p-8">
+                              <h3 class="fs-4 fw-bold">Edit Admin</h3>
+                              <!-- 使用<button>做關閉按鈕 -->
+                              <button type="buttn" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body px-8 py-1">
+                              <!-- 帳號資料 -->
+                              <form class="border-bottom">
+                                <fieldset disabled>
+                                  <legend class="fs-5 fw-bold">Account</legend>
+                                  <div class="mb-3">
+                                    <label for="memberNameInput" class="form-label">Name</label>
+                                    <input type="text" id="memberNameInput" class="form-control rounded-1 py-3"
+                                      value="Emir Wicks" disabled>
+                                  </div>
+                                  <div class="mb-6">
+                                    <label for="memberMailInput" class="form-label">Email</label>
+                                    <input type="email" id="memberMailInput" class="form-control rounded-1 py-3"
+                                      value="emir.wicks@mail.com" disabled>
+                                  </div>
+                                </fieldset>
+                              </form>
+                              <!-- 認證 -->
+                              <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Verification</h4>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                  <div class="fw-bold"><span
+                                      class="material-icons text-success align-top me-2">check_circle</span>Verified
+                                  </div>
+                                  <small>2020/4/12</small>
+                                </div>
+                                <button type="button" class="btn py-4 rounded-1 w-100 " disabled>Send Verification
+                                  Mail</button>
+                              </div>
+                              <!-- 權限 -->
+                              <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Access Level</h4>
+                                <select name="" class="form-select form-select-lg py-3"
+                                  aria-label=" Member Access Level">
+                                  <option>-Choose access level-</option>
+                                  <option value="Admin" selected>Admin</option>
+                                  <option value="Manager">Manager</option>
+                                </select>
+                              </div>
+                              <!-- 客製權限 -->
+                              <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Custom Access</h4>
+                                <form>
+                                  <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkLecture">
+                                    <label class="form-check-label" for="checkLecture">
+                                      Lecture
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkCoupon">
+                                    <label class="form-check-label" for="checkCoupon">
+                                      Coupon
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkMessage">
+                                    <label class="form-check-label" for="checkMessage">
+                                      Message
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkSetting">
+                                    <label class="form-check-label" for="checkSetting">
+                                      Setting
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkTaskMenu">
+                                    <label class="form-check-label" for="checkTaskMenu">
+                                      Task Menu
+                                    </label>
+                                  </div>
+                                </form>
+                              </div>
+                              <!-- 刪除帳號 -->
+                              <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Deactivate Account</h4>
+                                <div class="fw-bold mb-4 text-danger">
+                                  <span class="material-icons align-top me-2">warning</span>This cannot be undone!
+                                </div>
+                                <button type="button" class="btn btn-outline-danger py-4 rounded-1 w-100 ">Deactivate
+                                  This Account</button>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-outline-success btn-custome me-6"
+                                data-bs-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-success btn-custome">Update</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td>Yes</td>
+                <td>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0">
+                    <li class="me-2">
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons align-top p-2">visibility</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-block text-dark">
+                        <span class="material-icons  align-top p-2">edit</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 頁籤 -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-end">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span class="material-icons align-top">navigate_before</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link active" href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span class="material-icons align-top">navigate_next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+  </div>
+
+
+
+
+  <script type="module" src="../main.js"></script>
+</body>
+
+</html>

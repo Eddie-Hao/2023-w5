@@ -1,0 +1,55 @@
+<nav class="sidebar bg-gray-100 d-flex flex-column p-8">
+    <a href="#" class="mb-8">
+        <img src="../assets/images/logo-ANSWER.svg" alt="ANSWER">
+    </a>
+    <ul class="nav flex-column gap-4 mb-auto">
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" aria-current="page" href="#">
+                <span class="material-icons align-middle me-4">insert_chart</span>
+                Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">forum</span>
+                Question
+            </a>
+        </li>
+        <!-- <a>的class加上 ejs 判斷(三元運算子)，如果 page 為 assignment 的話加入 active 否則加入 link-dark  -->
+        <li class="nav-item">
+            <a class="nav-link fw-bold ps-0 <%= page === 'assignment' ? 'active' : 'link-dark' %>" href="../pages/index.html">
+                <span class="material-icons align-middle me-4">assignment</span>
+                Assignment
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">video_library</span>
+                Course
+            </a>
+        </li>
+        <!-- <a>的class加上 ejs 判斷(三元運算子)，如果 page 為 admin 的話加入 active 否則加入 link-dark  -->
+        <li class="nav-item">          
+            <a class="nav-link fw-bold ps-0 <%= page === 'admin' ? 'active' : 'link-dark' %>" href="../pages/admin.html">
+                <span class="material-icons align-middle me-4">group</span>
+                Admin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold link-dark ps-0" href="#">
+                <span class="material-icons align-middle me-4">settings</span>
+                Settings
+            </a>
+        </li>
+    </ul>
+    <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="Andy Chen" class="avatar rounded-circle">
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <h2 class="fs-6 fw-bold mb-1">Andy Chen</h2>
+            <small class="text-gray-600">andy0401@mail.com</small>
+        </div>
+    </div>
+</nav>
+

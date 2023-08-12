@@ -1,0 +1,59 @@
+// 參考 泉助教 w4 的 迴圈做間距
+// 因為預設spacing 只有到 3rem,所以自行新增設定
+
+// 最大間距數 mb-10
+$max: 20;
+
+@for $i from 0 through $max {
+    // margin
+    .m-#{$i} {
+        margin: $i * 4px !important ;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i * 4px !important;
+    }
+    .mt-#{$i} {
+        margin-top: $i * 4px !important;
+    }
+    .ms-#{$i} {
+        margin-left: $i * 4px !important;
+    }
+    .me-#{$i} {
+        margin-right: $i * 4px !important;
+    }
+    // padding
+    .p-#{$i} {
+        padding: $i * 4px !important ;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i * 4px !important;
+    }
+    .pt-#{$i} {
+        padding-top: $i * 4px !important;
+    }
+    .ps-#{$i} {
+        padding-left: $i * 4px !important;
+    }
+    .pe-#{$i} {
+        padding-right: $i * 4px !important;
+    }
+    .px-#{$i} {
+        padding-left: $i * 4px !important;
+        padding-right: $i * 4px !important;
+    }
+    .py-#{$i} {
+        padding-top: $i * 4px !important;
+        padding-bottom: $i * 4px !important;
+    }
+}
+
+.mb-auto{
+    margin-bottom: auto;
+}
+.me-auto{
+    margin-right: auto;
+}
+
+.ms-auto{
+    margin-left: auto;
+}

@@ -1,0 +1,30 @@
+.page-item:first-child .page-link,.page-item:last-child .page-link{
+    // width: 32px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.page-item:first-child .page-link{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.page-item:last-child .page-link{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.page-link{
+    
+    border: 1px solid $success;
+    background-color: $white;
+    color: $success;
+
+    &:hover{
+        border: 1px solid $success;
+        background-color: lighten($success , 65%);
+    }
+    &.active{
+        background-color: $success;
+        color: $white;
+    }
+}

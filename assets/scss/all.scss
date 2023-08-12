@@ -1,11 +1,41 @@
+// google font & icon
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap');
+@import "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round";
+
+// bs5
 @import "../../node_modules/bootstrap/scss/functions";
+
+// 自訂變數 -w5沒用到
 @import './utils/variables';
 
+@import "../../node_modules/bootstrap";
 
+// 客製
+
+// base
+@import './base/base.scss';
+@import './base/typography.scss';
+
+//utils
+@import './utils/spacing.scss';
+@import './utils/spacing.scss';
+@import './utils/helper.scss';
+
+// component
+@import './component/pagination.scss';
+@import './component/btn.scss';
+@import './component/avatar.scss';
+
+//  layout
 @import './layout/header.scss';
 @import './layout/footer.scss';
+@import './layout/sidebar.scss';
 
-
+// pages
+@import './pages/admin.scss';
 @import './pages/index.scss';
 
-@import "../../node_modules/bootstrap";
+
+
+
+
