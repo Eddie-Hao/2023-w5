@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>後台-Assignment</title>
-  <script type="module" crossorigin src="/2023-w5/assets/main-7e77f65f.js"></script>
-  <link rel="stylesheet" href="/2023-w5/assets/main-6246a892.css">
+  <script type="module" crossorigin src="/2023-w5/assets/main-1eb170ab.js"></script>
+  <link rel="stylesheet" href="/2023-w5/assets/main-5b90b514.css">
 </head>
 
 <body>
@@ -76,9 +76,17 @@
         </h1>
         <!-- 使用ejs + if else 判斷該加入哪段結構 -->
         
-        <a href="#" class="link-dark lh-base text-decoration-none">All Courses<span
-                class="material-icons-outlined text-success align-top ms-2">arrow_downward</span>
-        </a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle link-dark lh-base text-decoration-none"  id="dropdownAllCourse" data-bs-toggle="dropdown" aria-expanded="false">All Courses
+                    <span class="material-icons-outlined text-success align-top ms-2">arrow_downward</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownAllCourse">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+            </div>
+
         
     </div>
     <!-- 功能icon btn -->

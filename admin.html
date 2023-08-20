@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>後台-Admin</title>
-  <script type="module" crossorigin src="/2023-w5/assets/main-7e77f65f.js"></script>
-  <link rel="stylesheet" href="/2023-w5/assets/main-6246a892.css">
+  <script type="module" crossorigin src="/2023-w5/assets/main-1eb170ab.js"></script>
+  <link rel="stylesheet" href="/2023-w5/assets/main-5b90b514.css">
 </head>
 
 <body>
@@ -73,113 +73,118 @@
     <div class="d-flex align-items-center">
         <h1 class="fs-4 me-12">
             
-            Admin
+                Admin
         </h1>
         <!-- 使用ejs + if else 判斷該加入哪段結構 -->
         
-        <a href="#newAdmin" class="link-dark lh-base text-decoration-none" data-bs-toggle="modal">
-            <span class="material-icons-outlined text-success align-top me-2">add</span>Add New Admin
-        </a>
-        <!-- Modal -->
-        <div class="modal fade" id="newAdmin" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header p-8">
-                        <h3 class="fs-4 fw-bold">New Admin</h3>
-                        <!-- 使用<button>做關閉按鈕 -->
-                        <button type="buttn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body px-8 py-1">
-                        <!-- 帳號資料 -->
-                        <form class="border-bottom">
-                            <fieldset>
-                                <legend class="fs-5 fw-bold">Account</legend>
-                                <div class="mb-3">
-                                    <label for="addMemberName" class="form-label">Name</label>
-                                    <input type="text" id="addMemberName" class="form-control rounded-1 py-3" value="">
-                                </div>
-                                <div class="mb-6">
-                                    <label for="addMemberMail" class="form-label">Email</label>
-                                    <input type="email" id="addMemberMail" class="form-control rounded-1 py-3" value="">
-                                </div>
-                            </fieldset>
-                        </form>
-                        <!-- 認證 -->
-                        <div class="border-bottom py-6">
-                            <h4 class="fs-5 fw-bold mb-4">Verification</h4>
-                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                <div class="fw-bold"><span
-                                        class="material-icons text-danger align-top me-2">warning</span>Unverified</div>
-                                <small>2020/4/12</small>
-                            </div>
-                            <button type="button"
-                                class="btn btn-light border border-dark  link-success py-4 rounded-1 w-100 ">Send
-                                Verification
-                                Mail</button>
+            <a href="#newAdmin" class="link-dark lh-base text-decoration-none" data-bs-toggle="modal">
+                <span class="material-icons-outlined text-success align-top me-2">add</span>Add New Admin
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="newAdmin" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header p-8">
+                            <h3 class="fs-4 fw-bold">New Admin</h3>
+                            <!-- 使用<button>做關閉按鈕 -->
+                            <button type="buttn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- 權限 -->
-                        <div class="border-bottom py-6">
-                            <h4 class="fs-5 fw-bold mb-4">Access Level</h4>
-                            <select name="" class="form-select form-select-lg py-3" aria-label=" Member Access Level">
-                                <option selected>-Choose access level-</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Manager">Manager</option>
-                            </select>
-                        </div>
-                        <!-- 客製權限 -->
-                        <div class="border-bottom py-6">
-                            <h4 class="fs-5 fw-bold mb-4">Custom Access</h4>
-                            <form>
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="addCheckLecture">
-                                    <label class="form-check-label" for="addCheckLecture">
-                                        Lecture
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="addCheckCoupon">
-                                    <label class="form-check-label" for="addCheckCoupon">
-                                        Coupon
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="addCheckMessage">
-                                    <label class="form-check-label" for="addCheckMessage">
-                                        Message
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="addCheckSetting">
-                                    <label class="form-check-label" for="addCheckSetting">
-                                        Setting
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="addCheckTaskMenu">
-                                    <label class="form-check-label" for="addCheckTaskMenu">
-                                        Task Menu
-                                    </label>
-                                </div>
+                        <div class="modal-body px-8 py-1">
+                            <!-- 帳號資料 -->
+                            <form class="border-bottom">
+                                <fieldset>
+                                    <legend class="fs-5 fw-bold">Account</legend>
+                                    <div class="mb-3">
+                                        <label for="addMemberName" class="form-label">Name</label>
+                                        <input type="text" id="addMemberName" class="form-control rounded-1 py-3"
+                                            value="">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label for="addMemberMail" class="form-label">Email</label>
+                                        <input type="email" id="addMemberMail" class="form-control rounded-1 py-3"
+                                            value="">
+                                    </div>
+                                </fieldset>
                             </form>
-                        </div>
-                        <!-- 刪除帳號 -->
-                        <div class="border-bottom py-6">
-                            <h4 class="fs-5 fw-bold mb-4">Deactivate Account</h4>
-                            <div class="fw-bold mb-4 text-danger">
-                                <span class="material-icons align-top me-2">warning</span>This cannot be undone!
+                            <!-- 認證 -->
+                            <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Verification</h4>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="fw-bold"><span
+                                            class="material-icons text-danger align-top me-2">warning</span>Unverified
+                                    </div>
+                                    <small>2020/4/12</small>
+                                </div>
+                                <button type="button"
+                                    class="btn btn-light border border-dark  link-success py-4 rounded-1 w-100 ">Send
+                                    Verification
+                                    Mail</button>
                             </div>
-                            <button type="button" class="btn btn-outline-danger py-4 rounded-1 w-100 ">Deactivate This
-                                Account</button>
+                            <!-- 權限 -->
+                            <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Access Level</h4>
+                                <select name="" class="form-select form-select-lg py-3"
+                                    aria-label=" Member Access Level">
+                                    <option selected>-Choose access level-</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Manager">Manager</option>
+                                </select>
+                            </div>
+                            <!-- 客製權限 -->
+                            <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Custom Access</h4>
+                                <form>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="addCheckLecture">
+                                        <label class="form-check-label" for="addCheckLecture">
+                                            Lecture
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="addCheckCoupon">
+                                        <label class="form-check-label" for="addCheckCoupon">
+                                            Coupon
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="addCheckMessage">
+                                        <label class="form-check-label" for="addCheckMessage">
+                                            Message
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="addCheckSetting">
+                                        <label class="form-check-label" for="addCheckSetting">
+                                            Setting
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="addCheckTaskMenu">
+                                        <label class="form-check-label" for="addCheckTaskMenu">
+                                            Task Menu
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 刪除帳號 -->
+                            <div class="border-bottom py-6">
+                                <h4 class="fs-5 fw-bold mb-4">Deactivate Account</h4>
+                                <div class="fw-bold mb-4 text-danger">
+                                    <span class="material-icons align-top me-2">warning</span>This cannot be undone!
+                                </div>
+                                <button type="button" class="btn btn-outline-danger py-4 rounded-1 w-100 ">Deactivate
+                                    This
+                                    Account</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success btn-custome me-6"
-                            data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success btn-custome">Update</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success btn-custome me-6"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success btn-custome">Update</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         
     </div>
     <!-- 功能icon btn -->
@@ -251,7 +256,7 @@
                                     <div class="collapse" id="memberInfoEdit">
                                       <div class="d-flex justify-content-between pt-8">
                                         <a href="#" class="btn btn-outline-danger btn-custome">Deactivate</a>
-                                        <a href="#" class="btn btn-success btn-custome">Edit</a>
+                                        <a href="#" class="btn btn-success btn-custome" data-bs-toggle="modal" data-bs-target="#memberEdit1">Edit</a>
                                       </div>
                                     </div>
                                   </div>
@@ -577,9 +582,6 @@
       </div>
 
   </div>
-
-
-
 
   
 </body>
